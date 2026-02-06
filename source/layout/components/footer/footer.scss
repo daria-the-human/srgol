@@ -52,6 +52,8 @@
   }
 
   svg {
+    width: 35px;
+    height: 35px;
     fill: $white;
     transition: fill 0.3s ease;
 
@@ -124,34 +126,6 @@
 
 .footer__copyright {
   @include font($copy...);
-  display: flex;
-  justify-content: space-between;
-  width: 58%;
   color: $light-blue;
-
-  @include query($sm) {
-    width: 70%;
-  }
-
-  @include query($xs) {
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-  }
-
-  a {
-    color: $white;
-    text-decoration: none;
-    transition: color 0.3s ease;
-
-    &:hover {
-      color: $yellow;
-    }
-  }
-}
-
-.footer__copy--dev {
-  @include query($xs) {
-    margin-bottom: 24px;
-  }
+  text-align: center;
 }

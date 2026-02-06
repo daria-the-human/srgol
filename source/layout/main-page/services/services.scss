@@ -21,25 +21,22 @@
   }
 
   @include query($md) {
-    grid-column-gap: 16px;
-  }
-
-  @include query($sm) {
     grid-template-columns: 1fr 1fr;
+    grid-column-gap: 16px;
   }
 
   @include query($xs) {
     grid-template-columns: 1fr;
     grid-column-gap: 0;
-    grid-row-gap: 32px;
+    grid-row-gap: 16px;
   }
 }
 
 .services-item {
-  @include space(padding-top, vr-4);
-  @include space(padding-bottom, vr-4);
-  @include space(padding-right, vr-3);
-  @include space(padding-left, vr-3);
+  @include space(padding-top, vr-3);
+  @include space(padding-bottom, vr-3);
+  @include space(padding-right, vr-2);
+  @include space(padding-left, vr-2);
   box-shadow: 2px 4px 9px rgba(0, 0, 0, 0.25);
   border-radius: 16px;
   background-color: $white;
@@ -50,8 +47,15 @@
   }
 
   &__icon {
+    width: 40px;
+    height: 40px;
     fill: $dark-blue;
     transition: all 0.3s ease;
+
+    @include query($md) {
+      width: 32px;
+      height: 32px;
+    }
   }
 
   &__title {
@@ -65,62 +69,11 @@
     text-decoration: none;
     &:hover {
       .services-item__icon {
-        fill: $blue;
+        fill: $yellow;
       }
 
       .services-item__title {
-        color: $blue;
-      }
-    }
-  }
-
-  &:nth-child(4),
-  &:nth-child(6) {
-    height: 298px;
-
-    @include query($md) {
-      height: 400px;
-    }
-  }
-
-  @include query($sm) {
-    &:nth-child(1),
-    &:nth-child(2) {
-      height: 334px;
-    }
-
-    &:nth-child(3),
-    &:nth-child(4) {
-      height: 286px;
-    }
-
-    &:nth-child(5) {
-      grid-column: 1 / 3;
-
-      .services-item__list {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-
-    &:nth-child(6) {
-      grid-column: 1 / 3;
-      justify-self: center;
-      width: 294px;
-      height: 238px;
-    }
-  }
-
-  @include query($xs) {
-    &:nth-child(1n) {
-      width: auto;
-      height: auto;
-      grid-column: auto;
-    }
-
-    &:nth-child(5) {
-      .services-item__list {
-        grid-template-columns: 1fr;
+        color: $yellow;
       }
     }
   }
@@ -130,10 +83,15 @@
   @include space(margin-top, vr-2);
   padding: 0;
   list-style: none;
+
+  @include query($md) {
+      display: grid;
+      grid-template-columns: 1fr;
+  }
 }
 
 .services-subitem {
-  @include space(margin-bottom, vr-0);
+  @include space(margin-bottom, vr-1);
   @include font($p1...);
   display: grid;
   grid-template-columns: 20px 1fr;

@@ -191,8 +191,8 @@
                 <li class="services__item services-item">
                     <a href="{{ item.href }}">
                         <header class="services-item__header">
-                            <svg class="services-item__icon" width="50" height="50">
-                                <use xlink:href="https://sgolubenko.ru/assets/images/icons/sprite.svg#{{ item.icon }}"></use>
+                            <svg class="services-item__icon">
+                                <use href="#{{ item.icon }}"></use>
                             </svg>
                             <h3 class="services-item__title">{{ item.title }}</h3>
                         </header>
@@ -211,7 +211,7 @@
         </ul>
 
         <div class="services__btn">
-            {% set href = 'https://wa.me/79184784623' %}
+            {% set href = 'https://max.ru/u/f9LHodD0cOLUPwXTiVHKbe4jPqZRHfo8f1_-R6JtbhpXNsz5-7yK5XyUPII' %}
             {% set text = 'Получить консультацию' %}
             {% set color = 'dark-blue' %}
             {% include '../../components//button/button.twig' with href: href, text: text, color: color %}
