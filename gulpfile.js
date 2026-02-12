@@ -5,14 +5,16 @@ const del = require('del');
 const gulp = require('gulp');
 const imagemin = require('gulp-imagemin');
 const rename = require('gulp-rename');
-const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
 const svgmin = require('gulp-svgmin');
-const svgstore = require('gulp-svgstore');
 const twig = require('gulp-twig');
 const uglify = require('gulp-uglify-es').default;
+const svgstore = require('gulp-svgstore');
+const cheerio = require('gulp-cheerio');
+const merge = require('merge-stream');
 
-gulp.task('twig', async function() {
-    gulp.src([
+gulp.task('twig', function () {
+    return gulp.src([
         'source/layout/*.twig',
     ])
       .pipe(twig())
@@ -20,22 +22,22 @@ gulp.task('twig', async function() {
       .pipe(browserSync.reload({ stream: true }))
   });
 
-gulp.task('twig-blog', async function() {
-    gulp.src([
+gulp.task('twig-blog', function () {
+    return gulp.src([
         'source/layout/blog/**/*.twig',
     ])
         .pipe(twig())
         .pipe(gulp.dest('source/blog'))
-        .pipe(browserSync.reload({ stream: true }))
+        .pipe(browserSync.reload({ stream: true }));
 });
 
-gulp.task('twig-articles', async function() {
-    gulp.src([
+gulp.task('twig-articles', function () {
+    return gulp.src([
         'source/layout/articles/**/*.twig',
     ])
         .pipe(twig())
         .pipe(gulp.dest('source/articles'))
-        .pipe(browserSync.reload({ stream: true }))
+        .pipe(browserSync.reload({ stream: true }));
 });
 
 
@@ -79,13 +81,42 @@ gulp.task('libs', function (){
     .pipe(uglify())
     .pipe(gulp.dest('source/js'))
     .pipe(browserSync.reload({ stream: true }))
-})
+});
+
+gulp.task('icons-twig', function () {
+    return gulp.src('source/assets/images/icons/*.svg')
+        .pipe(svgmin({
+            plugins: [
+                { removeViewBox: false },
+                { cleanupIDs: false }
+            ]
+        }))
+        .pipe(cheerio({
+            run: function ($) {
+                $('[fill]').removeAttr('fill');
+                $('[stroke]').removeAttr('stroke');
+            },
+            parserOptions: { xmlMode: true }
+        }))
+        .pipe(svgstore({ inlineSvg: true }))
+        .pipe(cheerio({
+            run: function ($) {
+                $('svg')
+                    .attr('class', 'svg-sprite')
+                    .attr('style', 'position:absolute;width:0;height:0;overflow:hidden');
+            },
+            parserOptions: { xmlMode: true }
+        }))
+        .pipe(rename('_icons.twig'))
+        .pipe(gulp.dest('source/layout/partials/'));
+});
 
 gulp.task('watch', function () {
     gulp.watch('source/**/*.scss', gulp.parallel('scss'));
     gulp.watch('source/*.html', gulp.parallel('html'));
     gulp.watch('source/layout/**/*.twig', gulp.parallel('twig', 'twig-blog', 'twig-articles'));
     gulp.watch('source/js/*.js', gulp.parallel('js'));
+    gulp.watch('source/assets/images/icons/*.svg', gulp.parallel('icons-twig', 'twig'));
 });
 
 gulp.task('browser-sync', function () {
@@ -101,23 +132,25 @@ gulp.task('clean', async function () {
 });
 
 gulp.task('export', function () {
-    const buildHtml = gulp.src('source/**/*html')
+    const buildHtml = gulp.src('source/**/*.html')
         .pipe(gulp.dest('build'));
 
-    const buildPages = gulp.src('source/articles/**/*html', 'source/blog/**/*html')
-        .pipe(gulp.dest('build'));
-
-    const buildCss = gulp.src('source/assets/css/**/*css')
+    const buildCss = gulp.src('source/assets/css/**/*.css')
         .pipe(gulp.dest('build/assets/css'));
 
-    const buildJs = gulp.src('source/js/**/*js')
+    const buildJs = gulp.src([
+        'source/js/min/**/*.min.js',
+        'source/js/libs.min.js'
+    ], { allowEmpty: true })
         .pipe(gulp.dest('build/js'));
 
-    const buildFonts = gulp.src('source/assets/fonts/**/*.*')
+    const buildFonts = gulp.src('source/assets/fonts/**/*.*', { allowEmpty: true })
         .pipe(gulp.dest('build/assets/fonts'));
 
-    const icons = gulp.src('source/assets/images/icons/sprite.svg')
-        .pipe(gulp.dest('build/assets/images/icons'))
+    const buildImages = gulp.src('source/assets/images/**/*.*', { allowEmpty: true })
+        .pipe(gulp.dest('build/assets/images'));
+
+    return merge(buildHtml, buildCss, buildJs, buildFonts, buildImages);
 });
 
 gulp.task('images', function () {
@@ -149,23 +182,19 @@ gulp.task('script', function () {
         .pipe(gulp.dest('source/js/min'))
 })
 
-gulp.task('sprite', function () {
-    return gulp.src("source/assets/images/icons/*.svg")
-        .pipe(svgmin())
-        .pipe(svgstore({
-            inlineSvg: true,
-            removeViewBox: false
-        }))
-        .pipe(rename("sprite.svg"))
-        .pipe(gulp.dest("source/assets/images/icons"))
-});
-
 gulp.task('svg', function () {
     return gulp.src('source/assets/images/*.svg')
         .pipe(svgmin())
         .pipe(gulp.dest('build/assets/images'))
 });
 
-gulp.task('build', gulp.series('clean', 'images', 'script', 'svg', 'export'));
+gulp.task('build', gulp.series(
+    'clean',
+    'icons-twig',
+    gulp.parallel('twig', 'twig-blog', 'twig-articles'),
+    gulp.parallel('scss', 'libs'),
+    gulp.parallel('images', 'svg', 'script'),
+    'export'
+));
 
-gulp.task('default', gulp.parallel('twig', 'twig-blog', 'twig-articles', 'css', 'scss', 'libs', 'js', 'browser-sync', 'watch'));
+gulp.task('default', gulp.parallel('twig', 'twig-blog', 'twig-articles', 'icons-twig', 'css', 'scss', 'libs', 'js', 'browser-sync', 'watch'));

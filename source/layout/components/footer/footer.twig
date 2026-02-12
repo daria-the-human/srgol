@@ -1,18 +1,13 @@
 {% set social = [
     {
-        href: 'https://wa.me/79184784623',
-        icon: 'whatsapp',
-        text: 'Ватсапп'
+        href: 'https://max.ru/u/f9LHodD0cOLUPwXTiVHKbe4jPqZRHfo8f1_-R6JtbhpXNsz5-7yK5XyUPII',
+        icon: 'max',
+        text: 'Max'
     },
     {
         href: 'https://t.me/sgolubenko',
         icon: 'telegram',
         text: 'Телеграм'
-    },
-    {
-        href: 'https://www.instagram.com/mobimen/',
-        icon: 'insta',
-        text: 'Инстаграм'
     },
     {
         href: 'https://vk.com/sgolubenko',
@@ -30,8 +25,8 @@
                     {% for item in social %}
                         <li class="social__item">
                             <a href="{{ item.href }}" target="_blank">{{ item.text }}
-                                <svg class="services-item__icon" width="40" height="40">
-                                    <use xlink:href="https://sgolubenko.ru/assets/images/icons/sprite.svg#{{ item.icon }}"></use>
+                                <svg>
+                                    <use href="#{{ item.icon }}"></use>
                                 </svg>
                             </a>
                         </li>
@@ -55,9 +50,6 @@
             </div>
         </div>
         <div class="footer__copyright">
-            <p class="footer__copy footer__copy--dev">Design and development
-                <a href="http://dariaweb.pro/" target="_blank">dariaweb.pro</a>
-            </p>
             <p class="footer__copy">Copyright <span class="year"></span>, Сергей Голубенко</p>
         </div>
     </div>

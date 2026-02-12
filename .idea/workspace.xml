@@ -2,9 +2,42 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cfa0d035-20a9-4be7-94ad-6d850436cc2f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/source/assets/images/icons/max.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/source/layout/partials/_icons.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/gulpfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/articles/housing-law/main/article.html" beforeDir="false" afterPath="$PROJECT_DIR$/source/articles/housing-law/main/article.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/articles/housing-law/main/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/source/articles/housing-law/main/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/source/assets/css/style.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/source/assets/css/style.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/source/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/source/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/assets/images/icons/insta.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/assets/images/icons/sprite.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/assets/images/icons/telegram.svg" beforeDir="false" afterPath="$PROJECT_DIR$/source/assets/images/icons/telegram.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/assets/images/icons/vk.svg" beforeDir="false" afterPath="$PROJECT_DIR$/source/assets/images/icons/vk.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/assets/images/icons/whatsapp.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/source/blog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/blog/court-order/article.html" beforeDir="false" afterPath="$PROJECT_DIR$/source/blog/court-order/article.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/blog/court-order/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/source/blog/court-order/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/error.html" beforeDir="false" afterPath="$PROJECT_DIR$/source/error.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/source/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/layout/articles/housing-law/main/article.twig" beforeDir="false" afterPath="$PROJECT_DIR$/source/layout/articles/housing-law/main/article.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/layout/blog-page/blog-page.twig" beforeDir="false" afterPath="$PROJECT_DIR$/source/layout/blog-page/blog-page.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/layout/blog.twig" beforeDir="false" afterPath="$PROJECT_DIR$/source/layout/blog.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/layout/blog/court-order/article.twig" beforeDir="false" afterPath="$PROJECT_DIR$/source/layout/blog/court-order/article.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/layout/components/footer/footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/source/layout/components/footer/footer.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/layout/components/footer/footer.twig" beforeDir="false" afterPath="$PROJECT_DIR$/source/layout/components/footer/footer.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/layout/components/head.twig" beforeDir="false" afterPath="$PROJECT_DIR$/source/layout/components/head.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/layout/error.twig" beforeDir="false" afterPath="$PROJECT_DIR$/source/layout/error.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/layout/index.twig" beforeDir="false" afterPath="$PROJECT_DIR$/source/layout/index.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/layout/main-page/about/about.twig" beforeDir="false" afterPath="$PROJECT_DIR$/source/layout/main-page/about/about.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/layout/main-page/header/header.twig" beforeDir="false" afterPath="$PROJECT_DIR$/source/layout/main-page/header/header.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/layout/main-page/map/map.twig" beforeDir="false" afterPath="$PROJECT_DIR$/source/layout/main-page/map/map.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/layout/main-page/prices/prices.twig" beforeDir="false" afterPath="$PROJECT_DIR$/source/layout/main-page/prices/prices.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/layout/main-page/services/services.scss" beforeDir="false" afterPath="$PROJECT_DIR$/source/layout/main-page/services/services.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/layout/main-page/services/services.twig" beforeDir="false" afterPath="$PROJECT_DIR$/source/layout/main-page/services/services.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/scss/extra.scss" beforeDir="false" afterPath="$PROJECT_DIR$/source/scss/extra.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/source/scss/fonts.scss" beforeDir="false" afterPath="$PROJECT_DIR$/source/scss/fonts.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,6 +46,39 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="hot-fixes" />
+                    <option name="lastUsedInstant" value="1770405000" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="main" />
+                    <option name="lastUsedInstant" value="1770404999" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
   </component>
   <component name="GithubPullRequestsUISettings">
     <option name="hiddenUrls">
@@ -34,28 +100,30 @@
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/source/layout/components/dark-blue-button" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/source/assets/images/icons" />
       <recent name="$PROJECT_DIR$/source/assets/images" />
       <recent name="$PROJECT_DIR$/source/scss" />
       <recent name="$PROJECT_DIR$/source/assets" />
       <recent name="$PROJECT_DIR$/source/pages" />
-      <recent name="$PROJECT_DIR$/source/layout/blog/court-order" />
     </key>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -80,68 +148,26 @@
       <workItem from="1613144938153" duration="200000" />
       <workItem from="1614964360006" duration="357000" />
       <workItem from="1616337967608" duration="317000" />
+      <workItem from="1770404360800" duration="12262000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="439" y="177" key="#Inspections" timestamp="1612983150896">
-      <screen x="0" y="23" width="1680" height="980" />
-    </state>
-    <state x="439" y="177" key="#Inspections/0.23.1680.980@0.23.1680.980" timestamp="1612983150896" />
-    <state x="572" y="321" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1608148176010">
-      <screen x="0" y="23" width="1680" height="980" />
-    </state>
-    <state x="572" y="321" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1680.980@0.23.1680.980" timestamp="1608148176010" />
-    <state x="577" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1608244349084">
-      <screen x="0" y="23" width="1680" height="980" />
-    </state>
-    <state x="577" y="266" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1680.980@0.23.1680.980" timestamp="1608244349084" />
-    <state width="1657" height="264" key="GridCell.Tab.0.bottom" timestamp="1608148192150">
-      <screen x="0" y="23" width="1680" height="980" />
-    </state>
-    <state width="1657" height="264" key="GridCell.Tab.0.bottom/0.23.1680.980@0.23.1680.980" timestamp="1608148192150" />
-    <state width="1657" height="264" key="GridCell.Tab.0.center" timestamp="1608148192149">
-      <screen x="0" y="23" width="1680" height="980" />
-    </state>
-    <state width="1657" height="264" key="GridCell.Tab.0.center/0.23.1680.980@0.23.1680.980" timestamp="1608148192149" />
-    <state width="1657" height="264" key="GridCell.Tab.0.left" timestamp="1608148192149">
-      <screen x="0" y="23" width="1680" height="980" />
-    </state>
-    <state width="1657" height="264" key="GridCell.Tab.0.left/0.23.1680.980@0.23.1680.980" timestamp="1608148192149" />
-    <state width="1657" height="264" key="GridCell.Tab.0.right" timestamp="1608148192150">
-      <screen x="0" y="23" width="1680" height="980" />
-    </state>
-    <state width="1657" height="264" key="GridCell.Tab.0.right/0.23.1680.980@0.23.1680.980" timestamp="1608148192150" />
-    <state x="554" y="235" key="MultipleFileMergeDialog" timestamp="1608150332648">
-      <screen x="0" y="23" width="1680" height="980" />
-    </state>
-    <state x="554" y="235" key="MultipleFileMergeDialog/0.23.1680.980@0.23.1680.980" timestamp="1608150332648" />
-    <state x="517" y="267" width="645" height="492" key="find.popup" timestamp="1612983423237">
-      <screen x="0" y="23" width="1680" height="980" />
-    </state>
-    <state x="517" y="267" width="645" height="492" key="find.popup/0.23.1680.980@0.23.1680.980" timestamp="1612983423237" />
-    <state x="503" y="237" width="672" height="678" key="search.everywhere.popup" timestamp="1612822214181">
-      <screen x="0" y="23" width="1680" height="980" />
-    </state>
-    <state x="503" y="237" width="672" height="678" key="search.everywhere.popup/0.23.1680.980@0.23.1680.980" timestamp="1612822214181" />
   </component>
 </project>
