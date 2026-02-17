@@ -1,50 +1,3 @@
-{% set prices = [
-    {
-        name: 'Наименование услуги',
-        price: 'Cтоимость, руб.'
-    },
-    {
-        name: 'Устная консультация в офисе (возможен выезд)',
-        price: '5 000 руб.'
-    },
-    {
-        name: 'Составление досудебной претензии',
-        price: '10 000 руб.'
-    },
-    {
-        name: 'Подготовка искового заявления, апелляционной жалобы',
-        price: 'от 15 000 руб.'
-    },
-    {
-        name: 'Представление интересов гражданина в суде (разовое)',
-        price: '15 000 руб.'
-    },
-    {
-        name: 'Ведение дела в суде в интересах физического лица',
-        price: 'от 30 000 руб.'
-    }
-] %}
-
-{% set articles = [
-    {
-        name: 'Признание права собственности на жилые помещения',
-        text: 'Как происходит признание права собственности. Плюсы, минусы, подводные камни. Чем может помочь юрист,
-         и причем здесь жилищный кодекс.',
-        href: '/error.html'
-    },
-    {
-        name: 'Определение порядка пользования жилым помещением',
-        text: 'Как происходит определение порядка пользования жилым помещением. Чем может помочь юрист, и причем
-        здесь жилищный кодекс.',
-        href: '/error.html'
-    },
-    {
-        name: 'Споры, связанные с наймом жилых помещений',
-        text: 'Споры, связанные с наймом жилых помещений нередки, так как чаще всего такие сделки происходят вне
-        закона. Как избежать таких ситуаций?',
-        href: '/error.html'
-    },
-] %}
 
 <div class="container">
     <article class="article">
@@ -136,33 +89,76 @@
                 Голубенко Сергей Сергеевич</p>
             <img src="../../../../assets/images/lawyer-small.png" alt="Фото Голубенко Сергея">
         </div>
-        {% set href = 'https://max.ru/u/f9LHodD0cOLUPwXTiVHKbe4jPqZRHfo8f1_-R6JtbhpXNsz5-7yK5XyUPII' %}
-        {% set text = 'Связаться с юристом' %}
-        {% set color = 'dark-blue' %}
-        {% include '../../../components/button/button.twig' with href: href, text: text, color: color %}
+                                <a class="button button--dark-blue" href="https://max.ru/u/f9LHodD0cOLUPwXTiVHKbe4jPqZRHfo8f1_-R6JtbhpXNsz5-7yK5XyUPII" target="_blank">
+    Связаться с юристом
+</a>
 
     </article>
 
-    <table class="prices__table">
-        {% for item in prices %}
-            <tr>
-                <td>{{ item.name }}</td>
-                <td>{{ item.price }}</td>
+    
+
+<section class="prices" id="prices">
+    <div class="container">
+        <h2 class="prices__title title">Цены</h2>
+        <table class="prices__table">
+                        <tr>
+                <td>Наименование услуги</td>
+                <td>Cтоимость, руб.</td>
             </tr>
-        {% endfor %}
-    </table>
+                        <tr>
+                <td>Устная консультация в офисе (возможен выезд)</td>
+                <td>5 000 руб.</td>
+            </tr>
+                        <tr>
+                <td>Составление досудебной претензии</td>
+                <td>10 000 руб.</td>
+            </tr>
+                        <tr>
+                <td>Подготовка искового заявления, апелляционной жалобы</td>
+                <td>от 15 000 руб.</td>
+            </tr>
+                        <tr>
+                <td>Представление интересов гражданина в суде (разовое)</td>
+                <td>15 000 руб.</td>
+            </tr>
+                        <tr>
+                <td>Ведение дела в суде в интересах физического лица</td>
+                <td>от 30 000 руб.</td>
+            </tr>
+                    </table>
+
+        <div class="prices__btn">
+                                                <a class="button button--dark-blue" href="https://max.ru/u/f9LHodD0cOLUPwXTiVHKbe4jPqZRHfo8f1_-R6JtbhpXNsz5-7yK5XyUPII" target="_blank">
+    Связаться с юристом
+</a>
+        </div>
+    </div>
+</section>
 
     <section class="other-articles">
         <h2 class="other-articles__title">Другие статьи по теме</h2>
         <ul class="other-articles__list">
-            {% for item in articles %}
-            <li class="other-articles__item">
-                <a href="{{ item.href }}">
-                    <h3 class="other-articles__subtitle">{{ item.name }}</h3>
-                    <p class="other-articles__text">{{ item.text }}</p>
+                        <li class="other-articles__item">
+                <a href="/error.html">
+                    <h3 class="other-articles__subtitle">Признание права собственности на жилые помещения</h3>
+                    <p class="other-articles__text">Как происходит признание права собственности. Плюсы, минусы, подводные камни. Чем может помочь юрист,
+         и причем здесь жилищный кодекс.</p>
                 </a>
             </li>
-            {% endfor %}
-        </ul>
+                        <li class="other-articles__item">
+                <a href="/error.html">
+                    <h3 class="other-articles__subtitle">Определение порядка пользования жилым помещением</h3>
+                    <p class="other-articles__text">Как происходит определение порядка пользования жилым помещением. Чем может помочь юрист, и причем
+        здесь жилищный кодекс.</p>
+                </a>
+            </li>
+                        <li class="other-articles__item">
+                <a href="/error.html">
+                    <h3 class="other-articles__subtitle">Споры, связанные с наймом жилых помещений</h3>
+                    <p class="other-articles__text">Споры, связанные с наймом жилых помещений нередки, так как чаще всего такие сделки происходят вне
+        закона. Как избежать таких ситуаций?</p>
+                </a>
+            </li>
+                    </ul>
     </section>
 </div>
